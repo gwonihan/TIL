@@ -24,14 +24,147 @@
 
 - 터미널 명령어
 
-  1. `touch`
-  2. `mkdir`
-  3. `ls`
-  4. `mv`
-  5. `cd`
-  6. `rm`
-  7. `start, open`
-  8. `vi`
+  `touch` 
+  
+  - <u>파일 생성 명령어</u> (=`vi 파일명`)
+  - 띄어쓰기로 구분하여 **여러 파일**을 한꺼번에 생성 가능
+  - 숨김 파일을 만들기 위해서는 `.`을 파일 명 앞에 붙인다
+  
+  ```python
+  
+  $ touch text.txt
+  
+  ```
+  
+  `mkdir 파일명` :폴더 생성 명령어
+  
+  - make directory
+  - <u>새 폴더를 생성하는 명령어</u>
+  - 띄어쓰기 구분으로 **여러 폴더** 생성 가능
+  - 폴더 이름 사이에 공백을 넣으러면 따옴표로 묶음
+  
+  ```python
+  
+  $ mkdir folder
+  $ mkdir 'happy hacking'
+  
+  ```
+  
+  `ls` 
+  
+  - list segments
+  
+  - 디렉토리의 폴더/파일 목록을 보여줌
+  
+     - `-a` : all 옵션, 숨김 파일까지 모두 보여줌
+     - `-1` : long 옵션. 용량, 수정 날짜 등 파일 정보를 자세히 보여준다
+  
+  ```python
+  
+  # 기본사용
+  $ ls
+  
+  # all 옵션
+  # ls -a
+  
+  # all, long 옵션 함께 적용
+  $ ls -a -1
+  
+  # 여러 옵션 축약 가능
+  $ ls -al
+  
+  ```
+  
+  `mv` 
+  
+  - move
+  - <u>폴더/파일을 다른 폴더 내로 이동하거나 이름 변경하는 명령어</u>
+  - 단, 다른 폴더로 이동할 때는 작성한 폴더가 반드시 있어야 한다. 없으면 이름 바뀜
+  
+  ```python
+  
+  # text.txt를 folder 폴더 안에 넣을 때
+  $ mv text.txt folder
+  
+  # text1.txt의 이름을 text2.txt로 바꿀 때
+  $ mv text1.txt text2.txt
+  
+  ```
+  
+  `cd`
+  
+  - change directory
+  - 현재 작업 중인 디렉토리 변경하는 명령어
+  - `cd ~` 를 입력하면 홈 디렉토리로 이동
+  - `cd ..` 를 입력하면 부모 디렉토리로 이동함 (위로 가기)
+  - `cd -` 를 입력하면 전 디렉토리로 이동 (뒤로 가기)
+  
+  ```python
+  
+  # 현재 작업 중인 디렉토리에 있는 folder폴더로 이동
+  $ cd folder
+  
+  # 절대 경로를 통한 디렉토리 변경
+  $ cd C:/Users/kyle/Desktop
+  
+  # 상대 경로를 통한 디렉토리 변경
+  $ cd ../parent/child
+  
+  ```
+  
+  `rm`
+  
+  - remove
+  - 폴더/파일 지우는 명령어
+  - GUI와 달리 휴지통으로 이동하지 않고, 바로 `완전 삭제` 한다.
+  - `*(asterisk, wildcard)` 를 이용해서 `rm *.txt` 라고 입력하면 txt 파일 전체를 다 지웁니다.
+  - `-r` recursive 옵션. 폴더를 지울 때 사용합니다.
+  
+  ```python
+  
+  $ rm test.txt
+  $ rm -r folder
+  
+  ```
+  
+  `start, open`
+  
+  - 폴더/파일을 여는 명령어
+  - `windows` 에서는 start를, `Mac` 에서는 open을 사용할 수 있다.
+  
+  ```python
+  
+  # Windows
+  $ start test.txt
+  
+  # Mac
+  $ open test.txt
+  
+  ```
+  
+  `vi`
+  
+  - 기존에 파일이 있다면 수정
+  - 파일이 없고, 새롭게 생성하면서 수정
+  
+  ```python
+  $ vi a.txt
+  
+  `i` : 글쓰기 (insert)
+  `esc` + `:` + `wq` : 저장
+  ```
+
+
+
+- 유용한 단축키
+  - `위, 아래 방향키` : 과거에 작성했떤 명령어 조회
+  - `tap` : 폴더/파일 이름 자동 완성
+  - `ctrl + a` : 커서가 맨 앞으로 이동
+  - `ctrl + e` : 커서가 맨 뒤로 이동
+  - `ctrl + w` : 커서가 맨 앞 단어를 삭제
+  - `ctrl + l` : 터미널 화면을 깨끗하게 청소
+  - `ctrl + insert` : 복사
+  - `shift + insert` : 불여넣기
 
 
 
@@ -61,11 +194,13 @@
   - 백킷(`)을 한번 입력하면 인라인 코드블럭이 만들어짐
 
 ```python
+
 print('Hello D반!')
 if my_class="D반":
     print('Yay!!')
 else:
     print('cry...')
+    
 ```
 
  `코드 실행은 되지 않음`
@@ -134,9 +269,11 @@ else:
 
 한번만 해도 되는 작업
 
-`git `
+`git  config --global user.name "Your Name"`
 
-# Git - Github 연결 (Repository)
+`git config -- global user.email your@email.com`
+
+# Git - Github 연결 (Repository)as
 
 **Repository 연결할 때, 한번만 해도 되는 작업**
 
