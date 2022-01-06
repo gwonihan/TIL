@@ -188,6 +188,49 @@ c --- users --- student --- desktop --- TIL
 
 
 
-# gitignore
+# ***gitignore*** :no_entry:
 
-- https://www.toptal.com/developers/gitignore
+
+
+- `git add .` 를 하기전에 gitignore 폴더를 만들어야한다.
+- 쉽게 생각하면 `git init`을 하고 `gitignore`를 만든다.
+- .gitignore 파일을 생성하고 파일 안에 무시할 파일을 넣어놓으면 그 파일은 무시가 된다!
+
+
+
+# **clone push / pull**
+
+가정 
+
+- 이미 레포지토리에 커밋이 올라가 있다.
+- pull, push 하는 권한이 있다.
+
+
+
+**clone**
+
+- 빈 폴더( 상위 폴더에 깃이 없어야함)에 clone을 합니다.
+  - `git clone {url}` -> 새로운 폴더에 생성
+  - `git clone {url} .` -> 현재 폴더에 생성
+  - 
+- do something and push commit
+  - 원격 저장소가 원본 로컬 저장소보다 상위 버전이 됨.
+- 원본 로컬 저장소에서 원격 저장소 의 코밋을 pull 함
+  -  `git pull`
+
+conflict 상황
+
+- 왼쪽 디렉토리에서 a.txt 변경합니다
+- 그에 대한 코밋을 남깁니다.
+- 원격 저장소에 push 합니다
+
+
+
+- 오른쪽 디렉토리에서 a.txt를 다르게 변경합니다
+- 그에 대 한 코밋을 남깁니다.
+- 원격 저장소에서 pull 해옵니다.
+
+Conflict! 를 해결합니다
+
+- 원격 저장소에 push합니다
+- 왼쪽 디렉토리에서 원격 저장소에서 pull 해옵니다.
