@@ -166,8 +166,6 @@
   - `ctrl + insert` : 복사
   - `shift + insert` : 불여넣기
 
-
-
 # Typora 
 
 ## heading
@@ -320,7 +318,7 @@ c --- users --- student --- desktop --- TIL
 
 # **clone push / pull**
 
-가정 
+**가정** 
 
 - 이미 레포지토리에 커밋이 올라가 있다.
 - pull, push 하는 권한이 있다.
@@ -332,13 +330,12 @@ c --- users --- student --- desktop --- TIL
 - 빈 폴더( 상위 폴더에 깃이 없어야함)에 clone을 합니다.
   - `git clone {url}` -> 새로운 폴더에 생성
   - `git clone {url} .` -> 현재 폴더에 생성
-  - 
 - do something and push commit
   - 원격 저장소가 원본 로컬 저장소보다 상위 버전이 됨.
 - 원본 로컬 저장소에서 원격 저장소 의 코밋을 pull 함
   -  `git pull`
 
-conflict 상황
+**conflict 상황**
 
 - 왼쪽 디렉토리에서 a.txt 변경합니다
 - 그에 대한 코밋을 남깁니다.
@@ -391,3 +388,55 @@ Conflict! 를 해결합니다
   - git log --all --oneline
 
   - git log --all -oneline --graph
+
+
+
+# restore :back:
+
+- **`git restore {파일명}`**
+  - 가장 최근 기록(스테이징 에리아 혹은 코밋)으로 돌아온다
+- **`git restore {파일명} --staged`**
+  - 스테이징  에리아에서 내려준다
+- **`git rm {파일명} --cached`**
+  -  untracked 상태로 바꿔준다
+- **`git commit --amend`**
+  -  파일 수정이 없으면 코밋 메세지만 작성해주고
+  - 파일 수정이 있으면 그것을 반영하여 코밋을 덮어씌운다
+- **`diff`**
+  - 워킹디렉토리와 **가장 최근기록**(스테이징 에리아 혹은 코밋)의 차이를 보여준다
+- **`diff --staged`**
+  - **스테이징에리아와 코밋의 차이**를 보여준다
+
+
+
+# reset :alarm_clock:
+
+1. `git reset --soft <commit 고유번호>` 
+
+   : 코밋만 하면 원 상태로 돌아올 수 있다
+
+2. `git reset --mixed <commit 고유번호>` 
+
+   : add, commit 까지 하면 원 상태로 돌아올 수 있다 
+
+3. `git reset --hard <commit 고유번호>`
+
+   : 정말 모두 리셋
+
+4. `git reflog` : 코밋 리셋 기록을 확인
+
+5. `git revert <commit 고유번호>` 
+
+   : 해당 코밋을 취소하고 코밋을 만듬
+
+   - `git revert  <commit 고유번호>..<고유번호>` 
+     - 연속적인 리버트 방법!
+
+
+
+# Profile :selfie:
+
+- https://startbootstrap.com/ 
+  - 템플렛 다운로드 사이트
+  - 자유롭게 다운받아 사용 가능하다
+  - html 코드를 모르더라도, 대입하여 어느정도 수정 가능하다
