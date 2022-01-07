@@ -273,7 +273,7 @@ else:
 
 `git config -- global user.email your@email.com`
 
-# Git - Github 연결 (Repository)as
+# Git - Github 연결 (Repository)
 
 **Repository 연결할 때, 한번만 해도 되는 작업**
 
@@ -307,24 +307,6 @@ c --- users --- student --- desktop --- TIL
 
 ![file_tree](README/find-file-tree.svg)
 
-
-
-# 로컬
-
-- git init
-- do something(생성, 수정)
-  - 파일 생성, 폴더 생성(빈폴더 x)
-- git add .
-- git commit -m 'message'
-
-# 원격(최초 1회)
-
-- 깃허브 레포 만들기
-- git remote add origin {url}
-- git push -u origin master
-
-
-
 # ***gitignore*** :no_entry:
 
 
@@ -332,8 +314,9 @@ c --- users --- student --- desktop --- TIL
 - `git add .` 를 하기전에 gitignore 폴더를 만들어야한다.
 - 쉽게 생각하면 `git init`을 하고 `gitignore`를 만든다.
 - .gitignore 파일을 생성하고 파일 안에 무시할 파일을 넣어놓으면 그 파일은 무시가 된다!
-
-
+-  `* + 파일확장자` : * 뒤의 **모든**확장자 무시
+- `/` : 폴더 의미
+- `https://www.toptal.com/developers/gitignore` : 사이트
 
 # **clone push / pull**
 
@@ -371,3 +354,40 @@ Conflict! 를 해결합니다
 
 - 원격 저장소에 push합니다
 - 왼쪽 디렉토리에서 원격 저장소에서 pull 해옵니다.
+
+# branch :christmas_tree:
+
+- 브랜치만들기
+  - git branch {브랜치이름} 
+
+- 브랜치 확인
+  - git branch
+- 브랜치 지우기
+  - git branch -d {브랜치이름}
+  - git branch -D {브랜치이름}
+
+- 브랜치 이동
+  - git switch
+  - git check out
+  - 만들면서 이동
+    - git switch -c 브랜치이름
+
+- 브랜치 merge
+
+  - 기준이 될 브랜치에서!
+    - git merge(합칠 브랜치 이름)
+
+  1. 두 브랜치 모두에서 수정사항이 있지만, 겹치지 않은 상황
+     - 3-way merge
+  2. 두 브랜치 모두에서 수정사항이 있고, 겹친상황
+     - Conflict 해결 후 commit
+  3. 합쳐질 브랜치에서만 수정사항이 있는 상황
+     - Fast-forword 잘 합쳐짐
+
+- 깃 로그 확인
+
+  - git log --oneline
+
+  - git log --all --oneline
+
+  - git log --all -oneline --graph
