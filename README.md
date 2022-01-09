@@ -4,14 +4,14 @@
 
 1. [Git ?](#git)
 2. [Typora](#typora)
-3. [Git - Github 연결 (User)](#git - github-연결-(User))
+3. [Git과 Github 연결(User)](#git과-github-연결(user))
 4. [File Tree](#file-tree)
-5. [***gitignore*** ⛔](#***gitignore*** ⛔)
+5. [***gitignore***](#gitignore)
 6. [clone push / pull](#clone-push-/-pull)
-7. [branch 🎄](#branch-🎄)
-8. [restore 🔙](#restore-🔙)
-9. [reset ⏰](#reset-⏰)
-10. [Profile 🤳](#profile-🤳)  
+7. [branch](#branch)
+8. [restore](#restore)
+9. [reset](#reset)
+10. [Profile](#profile)  
 11. [Python](#python)
 
 # Git ?
@@ -277,7 +277,7 @@ else:
 
 - `|`+` ` : 개수가 간의 개수
 
-# Git - Github 연결 (User)
+# Git과 Github 연결(User)
 
 한번만 해도 되는 작업
 
@@ -285,7 +285,7 @@ else:
 
 `git config -- global user.email your@email.com`
 
-# Git - Github 연결 (Repository)
+# Git과 Github 연결(Repository)
 
 **Repository 연결할 때, 한번만 해도 되는 작업**
 
@@ -321,7 +321,7 @@ c --- users --- student --- desktop --- TIL
 
 ![file_tree](README/find-file-tree.svg)
 
-# ***gitignore*** :no_entry:
+# ***gitignore***
 
 
 
@@ -368,7 +368,7 @@ Conflict! 를 해결합니다
 - 원격 저장소에 push합니다
 - 왼쪽 디렉토리에서 원격 저장소에서 pull 해옵니다.
 
-# branch :christmas_tree:
+# branch
 
 - 브랜치만들기
   - git branch {브랜치이름} 
@@ -407,7 +407,7 @@ Conflict! 를 해결합니다
 
 
 
-# restore :back:
+# restore
 
 - **`git restore {파일명}`**
   - 가장 최근 기록(스테이징 에리아 혹은 코밋)으로 돌아온다
@@ -425,7 +425,7 @@ Conflict! 를 해결합니다
 
 
 
-# reset :alarm_clock:
+# reset
 
 1. `git reset --soft <commit 고유번호>` 
 
@@ -450,7 +450,7 @@ Conflict! 를 해결합니다
 
 
 
-# Profile :selfie:
+# Profile
 
 - https://startbootstrap.com/ 
   - 템플렛 다운로드 사이트
