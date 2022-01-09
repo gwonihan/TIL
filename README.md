@@ -1,4 +1,14 @@
-**Getting better day by day**
+# **Getting better day by day**
+
+#### 2022 목표
+
+1. 빅데이터 과정 출석률 100% 수강완료
+2. 8시 기상
+3. 클라이밍 V6 달성
+4. 일주일에 한 번 이상 새벽기도
+5. 하루 1시간 이상 공부
+
+---
 
 ## 목차
 
@@ -168,7 +178,42 @@
   `esc` + `:` + `wq` : 저장
   ```
 
+- Git Github 연결
 
+  -  User 연결 : 한번만 해도 되는 작업
+
+  ````python
+  
+  $ git  config --global user.name "Your Name"
+  $ git config -- global user.email your@email.com
+  
+  ````
+
+  - epository 연결할 때, 한번만 해도 되는 작업
+
+  ````python
+  
+  $ git init : git 시작
+  
+  $ git remote add origin <git repository url> : repository 연결
+  
+  $ ctrl + insert
+  
+  $ shift + insert : 붙여넣기
+      
+  ````
+
+- 파일 수정, 생성 할 때마다 해야하는 작업!!
+
+  - `git add .` : 모든 파일 staging area에 올리기
+
+  - `git add <file_name>` : 파일 staging area에 올리기
+
+  - `git commit -m 'commit message'` : 커밋 massage 작성
+
+  - `git push origin master` : github로 밀어내기!
+
+  - `git push -u 원격저장소명 브랜치명` : 이 명령어를 입력하면 추후에 git push만 입력하여 push 가능	
 
 - 유용한 단축키
   - `위, 아래 방향키` : 과거에 작성했떤 명령어 조회
@@ -276,44 +321,6 @@ else:
 |      |      |      |
 
 - `|`+` ` : 개수가 간의 개수
-
-# Git Github 연결(User)
-
-한번만 해도 되는 작업
-
-`git  config --global user.name "Your Name"`
-
-`git config -- global user.email your@email.com`
-
-# Git과 Github 연결(Repository)
-
-**Repository 연결할 때, 한번만 해도 되는 작업**
-
-`git init` : git 시작
-
-`git remote add origin <git repository url>` : repository 연결
-
-`ctrl + v` : 문서작업용
-
-`shift + insert` : 붙여넣기
-
-
-
-파일 수정, 생성 할 때마다 해야하는 작업!!
-
-`git add .` : 모든 파일 staging area에 올리기
-
-`git add <file_name>` : 파일 staging area에 올리기
-
-`git commit -m 'commit message'` : 커밋 massage 작성
-
-`git push origin master` : github로 밀어내기!
-
-`git push -u 원격저장소명 브랜치명` : 이 명령어를 입력하면 추후에 git push만 입력하여 push 가능									 
-
-
-
-
 
 # File Tree
 
