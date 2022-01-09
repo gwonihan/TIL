@@ -4,10 +4,10 @@
 
 1. [Git ?](#git)
 2. [Typora](#typora)
-3. [Git과 Github 연결(User)](#git과-github-연결(user))
+3. [Git Github 연결(User)](#git-github-연결(user))
 4. [File Tree](#file-tree)
 5. [***gitignore***](#gitignore)
-6. [clone push / pull](#clone-push-/-pull)
+6. [clone push pull](#clone-push-pull)
 7. [branch](#branch)
 8. [restore](#restore)
 9. [reset](#reset)
@@ -277,7 +277,7 @@ else:
 
 - `|`+` ` : 개수가 간의 개수
 
-# Git과 Github 연결(User)
+# Git Github 연결(User)
 
 한번만 해도 되는 작업
 
@@ -332,7 +332,7 @@ c --- users --- student --- desktop --- TIL
 - `/` : 폴더 의미
 - `https://www.toptal.com/developers/gitignore` : 사이트
 
-# **clone push / pull**
+# **clone push pull**
 
 **가정** 
 
