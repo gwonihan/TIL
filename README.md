@@ -1,5 +1,19 @@
 **Getting better day by day**
 
+## 목차
+
+1. [Git ?](#git)
+2. [Typora](#typora)
+3. [Git - Github 연결](#git---githun-연결)
+4. [File Tree](#file-tree)
+5. [Gitignore](#gitignore)
+6. [Clone push / pull](#clone-push)
+7. [Branch](#branch)
+8. [Restore](#restore)
+9. [Reset](#reset)
+10. [Profile](#profile)
+11. [Python](#python)
+
 # Git ?
 
 - 분산 **버전 관리** 시스템
@@ -168,14 +182,14 @@
 
 # Typora 
 
-## heading
+### heading
 
 - `#` : h1
 - `##` : h2
 - `###` : h3
 - h6까지 있다.
 
-## list
+### list
 
 - 순서가 있는 1
   - `1.` : 순서가 있는 리스트 생성
@@ -185,7 +199,7 @@
 
 
 
-## code block
+### code block
 
 - `" ``` "`
   - 백킷(`)을 세번 입력하면 코드 블럭이 만들어짐
@@ -205,7 +219,7 @@ else:
 
 
 
-## 링크
+### 링크
 
 - `[string](url)` : 링크 생성	
 
@@ -215,7 +229,7 @@ else:
 
 
 
-## 이미지링크
+### 이미지링크
 
 - `![string](url)`:이미지링크생성
 
@@ -225,7 +239,7 @@ else:
 
 
 
-## 텍스트 강조
+### 텍스트 강조
 
 - `**텍스트**` : **안녕**->볼드체 : `ctrl`+`b`
 
@@ -239,13 +253,13 @@ else:
 
 
 
-## 수평선
+### 수평선
 
 - `-`*3 : 연속으로 3번 입력하면 단락구분을 할 수있다.
 - `*`*3
 - `_`*3
 
-## 인용문
+### 인용문
 
 - `>`
 
@@ -255,7 +269,7 @@ else:
 
   - > > 오지혜강사님 두뇌
 
-## 표
+### 표
 
 | 1    | 2    | 3    |
 | ---- | ---- | ---- |
@@ -293,7 +307,9 @@ else:
 
 `git commit -m 'commit message'` : 커밋 massage 작성
 
-`git push origin master` : github로 밀어내기!									 
+`git push origin master` : github로 밀어내기!
+
+`git push -u 원격저장소명 브랜치명` : 이 명령어를 입력하면 추후에 git push만 입력하여 push 가능									 
 
 
 
