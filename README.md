@@ -1,5 +1,11 @@
 **Getting better day by day**
 
+## 목차
+
+1. [Git ?](#git ?)
+2. [Typora](#typora)
+3. 
+
 # Git ?
 
 - 분산 **버전 관리** 시스템
@@ -293,7 +299,9 @@ else:
 
 `git commit -m 'commit message'` : 커밋 massage 작성
 
-`git push origin master` : github로 밀어내기!									 
+`git push origin master` : github로 밀어내기!
+
+`git push -u 원격저장소명 브랜치명` : 이 명령어를 입력하면 추후에 git push만 입력하여 push 가능									 
 
 
 
