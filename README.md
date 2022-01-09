@@ -4,14 +4,14 @@
 
 1. [Git ?](#git)
 2. [Typora](#typora)
-3. [Git - Github 연결](#git---githun-연결)
+3. [Git - Github 연결](#git - github 연결)
 4. [File Tree](#file-tree)
-5. [Gitignore](#gitignore)
-6. [Clone push / pull](#clone-push)
-7. [Branch](#branch)
-8. [Restore](#restore)
-9. [Reset](#reset)
-10. [Profile](#profile)
+5. [gitignore](#gitignore)
+6. [clone push / pull](#clone-push)
+7. [branch](#branch)
+8. [restore](#restore)
+9. [reset](#reset)
+10. [Profile :selfie:](#profile)  
 11. [Python](#python)
 
 # Git ?
