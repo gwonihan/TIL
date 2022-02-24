@@ -32,7 +32,17 @@ df.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
 df.head()
 
 # One-hot encoding
-dh = pd.get_dummies(df, columns=['Sex', 'Embarked', 'Title'])
+# dh = pd.get_dummies(df, columns=['Sex', 'Embarked', 'Title'])
+# Label encoding
+# Tree 계열인 XGBRegressor를 사용할 것이므로 nominal feature들을
+# one-hot encoding이 아닌 label encoding을 사용해도 된다.
+# SVM, Deep Learning 등 Tree 계열이 아닌 것을 사용하려면 
+# one-hot encoding을 사용해야 한다.
+# 라벨 인코더 생성
+for col in ['Sex', 'Embarked', 'Title']:
+  enc = LabelEncoder()
+  df[col] = enc.fit_transform(df[col])
+
 
 # XGBoost를 이용해서 Age의 결측치를 추정해 보자
 # Age feature는 177개가 결측치이다 (NaN).
