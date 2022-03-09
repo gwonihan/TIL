@@ -1,28 +1,27 @@
 # 다시 풀기
 
-board=[[]*10 for _ in range(10)]
+# 개미집 만들기
+ant = []
 for i in range(10):
-    board[i]=list(map(int,input().split()))
-x=1
-y=1
-board[x][y]=9
+    ant.append(list(map(int, input().split())))
 
-while True:
-    if(board[x][y]==2):
-        board[x][y]=9
-        break
-    if(board[x][y+1]!=1):
-        board[x][y]=9
-        y+=1
+# 시작점
+x, y = 1, 1
+
+# 오른쪽, 아래 이동
+while ant[x][y] != 2:
+    if ant[x][y] == 0:
+        ant[x][y] = 9
+        y += 1
     else:
-        if(board[x+1][y]!=1):
-            board[x][y]=9
-            x+=1
-        else:
-          board[x][y]=9
-          break
+        x += 1
+        y -= 1
 
+# 2인 먹이를 9로 할당
+ant[x][y] = 9
+
+# 개미집 출력
 for i in range(10):
     for j in range(10):
-        print(board[i][j],end=' ')
+        print(ant[i][j], end=" ")
     print()
