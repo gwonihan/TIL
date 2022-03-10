@@ -1,0 +1,55 @@
+#### 변수 설정
+
+n_data = 1000
+sine = np.sin(2 * np.pi * 0.03 * np.arange(n_data)) + np.random.random(n_data) # noisy sine
+df = pd.DataFrame({'sine':sine})
+data = np.array(df)
+t_step = 20
+n_jump = 1
+
+##### 함수부분
+
+n_data = data.shape[0]   # number of data
+print('n_data : ', n_data)
+n_feat = data.shape[1]   # number of features
+print('n_feat : ', n_feat)
+
+#m은 0~979까지(n_data - t_step)
+m = np.arange(0, n_data - t_step, n_jump)   # m =  [0, 1, 2, 3, 4, 5]
+# print('m :', m)
+print('m.shape :', m.shape)
+
+x = np.array([data[i:(i+t_step), :] for i in m])      # feature data
+print('=========== x[0]의 모양 ==============')
+print(x[0])
+print('x.shape :', x.shape)
+print('x는 0~19, 1~20, 2~21 이런식의 리스트가 980개가 쌓인 모습\n')
+## x는 0~19, 1~20, 2~21 이런식의 리스트가 980개가 쌓인 모습
+
+
+y = np.array([data[i, :] for i in (m + t_step)])      # target data
+print('=========== y[0]의 모양 ==============')
+print(y[0],' y는 이런식으로 출력값이 하나인 리스트 980개')
+#이런식으로 출력값이 하나인 리스트 980개
+print('y.shape :', y.shape)
+## y는 출력값 리스트가 980개가 쌓인 모습
+
+# shape을 조정한다. feature = 3D, target = 2D
+x_data = x.reshape(-1, t_step, n_feat)
+y_target = y.reshape(-1, n_feat)
+
+print('x_data.shape :', x_data.shape)
+print('y_target.shape :', y_target.shape)
+
+''' 단순히 SimpleRNN에 사용될 훈련 데이터를 생성하는 함수라고 보시면됩니다. 
+다만, 순차적으로 예상하기 위해 x 타겟을 한칸씩 미루면서 그에따른 y 타겟도 정하게 되는거죠.
+만약 첫번째 훈련 데이터가 x : 0~20의 데이터가 들어왔다면 y값을 21번째 데이터로 설정하고,
+x : 1~21의 데이터가 들어왔다면 y값을 22번째 데이터로 설정합니다.
+그림으로 설명하는 것이 더 쉬운데 아마 강사님이 그려주신 그림을 보시면 이해하실 수 있을거에요. 
+
+요약하면 sine 함수로 생성된 1000개의 선형 데이터(순차적인 데이터)를 20개씩 나누어서 980번 학습 시키기 위한
+데이터 생성 함수입니다.
+'''
+
+https://www.youtube.com/watch?v=pjw7yfpk2jc&list=PLpIPLT0Pf7IoTxTCi2MEQ94MZnHaxrP0j&index=1&t=1s
+
