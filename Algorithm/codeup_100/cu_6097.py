@@ -1,9 +1,9 @@
 a,b = map(int,input().split())
 li = []
 
-for i in range(a+1):
+for i in range(a):
     li.append([])
-    for j in range(b+1):
+    for j in range(b):
         li[i].append(0)
 
 c = int(input())
@@ -20,7 +20,7 @@ for _ in range(c):
     else:
         continue
 
-for i in range(1,a+1):
-    for j in range(1,b+1):
+for i in range(a):
+    for j in range(b):
         print(li[i][j], end=' ')
     print()
