@@ -1,3 +1,5 @@
+# 직각삼각형
+
 while True:
     num_list = list(map(int,input().split()))
     max_num = max(num_list)
