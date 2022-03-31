@@ -7,5 +7,6 @@ for i in range(len(word)):
 dic = {string:i for i,string in enumerate(li)}
 dic1 = sorted(dic.items())
 
+
 for i in range(len(word)):
     print(dic1[i][1])

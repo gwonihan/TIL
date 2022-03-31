@@ -1,11 +1,41 @@
-n = int(input())  # 분해합을 입력값으로 받음
+# 생성자
 
-for i in range(1, n+1):   # 해당 분해합의 생성자 찾기
-    num = sum((map(int, str(i))))  # i의 각 자릿수를 더함
-    num_sum = i + num  # 분해합 = 생성자 + 각 자릿수의 합
-    # i가 작은 수부터 차례로 들어가므로 처음으로 분해합과 입력값이 같을때가 가장 작은 생성자를 가짐
-    if num_sum == n:
-        print(i)
-        break
-    if i == n:  # 생성자 i와 입력값이 같다는 것은 생성자가 없다는 뜻
-        print(0)
+
+
+
+#분해합
+
+
+
+# 지은님 풀이
+# #i를 문자열로 만든 후 , 인덱싱을 이용해서 더하기..
+
+# N = int(input())
+# #n = int(N)
+
+# jj_lst = []
+# ii_lst = [] #생성자 목록
+# i_lst = []
+# #for i in range(len(N)):
+
+# jj = 0
+# #생성자(M)는 어차피  N보다 작다...
+# for i in range(N):
+#     jj = 0
+#     ii = i
+#     str_i = str(i)
+#     for j in range(len(str_i)): #i의 자리수...
+#         #자리수끼리 더한거
+#         jj += int(str_i[j])
+
+#     if jj < N:
+#         if ii+jj == N:
+#             ii_lst.append(ii)
+#         else:
+#             continue
+
+
+# if ii_lst == []:
+#     print(0)
+# else:
+#     print(min(ii_lst))

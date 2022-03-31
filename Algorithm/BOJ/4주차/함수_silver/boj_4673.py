@@ -1,6 +1,6 @@
 # 셀프 넘버
 numbers = list(range(1,10001))
-remove_list = []
+remove_list = [] # << 분해합
 
 for num in numbers:
     for n in str(num):
