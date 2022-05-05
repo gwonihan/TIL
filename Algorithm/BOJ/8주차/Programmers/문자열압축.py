@@ -14,8 +14,9 @@ for alpa in word_list:
             cnt_list.append(str(cnt)+alpa)
     
 
-        
 
 # aaaab
+
 # aabbaccc
+
 # 2a2ba3c
