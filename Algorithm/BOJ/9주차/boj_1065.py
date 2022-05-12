@@ -9,6 +9,8 @@ for i in num_li:
     if i < 100:
         cnt +=1
     else:
-        pass
+        li = list(map(int, str(i)))
+        if li[0] - li[1] == li[1] - li[2]:
+            cnt +=1
 
 print(cnt)
