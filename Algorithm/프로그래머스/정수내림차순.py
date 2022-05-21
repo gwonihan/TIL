@@ -5,5 +5,3 @@ def solution(n):
     li.sort(reverse=True)
     answer = ''.join(map(str,li))
     return int(answer)
-
-solution(118372)

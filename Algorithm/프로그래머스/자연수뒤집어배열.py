@@ -1,8 +1,11 @@
 # 자연수 뒤집어 배열로 만들기
-from re import A
+
+def solution(n):
+    re = list(map(int, str(n)))
+    re.reverse()
+    answer = re
+    return answer
 
 
-a = 12345
-a = list(str(a))
-a = list(map(int, a))
-print(A)
+# def digit_reverse(n):
+#     return list(map(int, reversed(str(n))))
