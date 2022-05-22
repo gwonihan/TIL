@@ -2,12 +2,15 @@
 s = "try hello world"
 
 word_li = list(s.split())
+cng_list = []
 
 for word in word_li:
-    for j in range(len(word)):
-        if j == 0 or j % 2 == 0:
-            word[j] = word[j].upper()
-            print(word)
+    cng = ""
+    for s in range(len(word)):
+        if s == 0 or s % 2 == 0:
+            cng += word[s].upper()
         else:
-            pass
+            cng += word[s].lower()
+    cng_list.append(cng)
 
+print(" ".join(cng_list))
