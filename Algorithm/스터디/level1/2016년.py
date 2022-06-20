@@ -1,3 +1,4 @@
+# 2016년
 def solution(a, b):
     answer = 0
     days = ['FRI','SAT','SUN','MON','TUE','WED','THU']
@@ -10,10 +11,3 @@ def solution(a, b):
     answer = answer%7
     
     return days[answer]
-
-# 재헌님 풀이
-# from datetime import datetime, date
-# def solution(a, b):
-#     today=['MON','TUE','WED','THU','FRI','SAT','SUN']
-#     answer=today[date(2016,a,b).weekday()]
-#     return answer
