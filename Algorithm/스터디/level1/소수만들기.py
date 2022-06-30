@@ -1,0 +1,23 @@
+# 소수 확인 함수
+def is_prime_number(num):
+    if num == 0 or num == 1:
+        return False
+    else:
+        for n in range(2, (num//2)+1):
+            if num % n == 0:
+                return False
+        
+        else:
+            return True
+
+from itertools import combinations # 중복 허용 x, 순서 의미 o
+# 3개 숫자의 합 만들기
+def solution(nums):
+    answer = 0
+    cmb = list(combinations(nums,3))
+    
+    for arr in cmb:
+        if is_prime_number(sum(arr)):
+            answer += 1
+    
+    return answer
