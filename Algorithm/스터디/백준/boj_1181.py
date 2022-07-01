@@ -1,10 +1,17 @@
 # 단어 정렬
-N = int(input())
-dic = {}
+n = int(input())
 
-for _ in range(N):
-    M = input()
-    dic[M] = len(M)
+word = []
+for i in range(n):
+    word.append(input())
+    
+set_word = list(set(word))
 
-dic = sorted(dic.items(), key=lambda x:x[1])
-print(dic)
+sort_word = []
+for i in set_word:
+    sort_word.append((len(i), i))
+
+result = sorted(sort_word)
+
+for len_word,word in result:
+    print(word)
