@@ -7,7 +7,7 @@ num_li.sort()
 print(*num_li, sep='\n')
 
 
-
+w
 # for _ in range(N):
 #     num_li.append(int(sys.stdin.readline()))
 
