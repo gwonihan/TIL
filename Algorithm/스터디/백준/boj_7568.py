@@ -11,14 +11,11 @@ for i in dungchi:
     for j in range(len(dungchi)):
         if i == dungchi[j]:
             pass
-        elif i[0] >= dungchi[j][0] and i[1] >= dungchi[j][1]:
-            pass
-        elif i[0] >= dungchi[j][0] and i[1] <= dungchi[j][1]:
-            pass
-        elif i[0] <= dungchi[j][0] and i[1] >= dungchi[j][1]:
-            pass
+        
+        if i[0] < dungchi[j][0] and i[1] < dungchi[j][1]:
+            ranking += 1
         else:
-            ranking += 1s
+            pass
         
     answer.append(ranking)
 
