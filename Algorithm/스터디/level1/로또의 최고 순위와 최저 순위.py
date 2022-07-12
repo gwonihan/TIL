@@ -1,5 +1,5 @@
 # 로또의 최고 순위와 최저 순위
-# 천재 의풀이
+# 천재의 풀이
 def solution(lottos, win_nums):
 
     rank=[6,6,5,4,3,2,1]
