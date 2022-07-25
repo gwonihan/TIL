@@ -2,16 +2,22 @@
 
 def solution(s):
     answer = ''
-    for word in list(s.split()):
-        word.lower()
-        if word[0].isdigit() == True:
-            answer += word
-            answer += " "
-        else:
-            word = word.capitalize()
-            answer += word
-            answer += " "
+    a = s.title()
     
-    answer = answer[:-1]
+    cnt = 0
+    
+    while True:
+        if a[cnt].isdigit() == True:
+            answer += a[cnt]
+            answer += a[cnt+1].lower()
+            cnt += 2
+            
+        else:
+            answer += a[cnt]
+            cnt += 1 
+        
+        if cnt == len(a):
+            break
+            
             
     return answer
