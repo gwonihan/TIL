@@ -10,3 +10,6 @@ for i in range(L):
     res += ((ord(str_[i])-96) * (r ** i))
 
 print(res % M)
+
+.
+.
