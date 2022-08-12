@@ -4,18 +4,13 @@ import sys
 case = int(sys.stdin.readline())
 
 for _ in range(case):
-    n, m = map(int, sys.stdin.readline().split())
-    workspace = list(map(int, sys.stdin.readline().split()))
+    n, m = map(int,sys.stdin.readline().split())
+    d = list(map(int, sys.stdin.readline().split()))
 
-    pnt = 1
-    while True:
-        max_number = max(workspace)
+    order = 0
 
-        if workspace[m] != max_number:
-            pnt += 1
-            workspace.remove(max_number)
-        else:
-            break
+    li = []
+    for i in range(n):
+        li.append((i, d[i]))
     
-    print(pnt)
-    
+    print(li) 
