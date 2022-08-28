@@ -1,21 +1,22 @@
 #나는야 포켓몬 어쩌구
 import sys
-M,N = map(int,sys.stdin.readline().split())
+M,N = map(int,input().split())
 
-poketmon = {}
+poketmon_num = {}
+poketmon_name = {}
 for i in range(1,M+1):
-    poketmon[i] = sys.stdin.readline()
-
-covert_po = {v:k for k,v in poketmon.items()}
+    poketmon = input()
+    poketmon_num[i] = poketmon
+    poketmon_name[poketmon] = i
 
 
 for i in range(N):
-    answer = sys.stdin.readline()
+    answer = input()
 
     if answer.isdigit():
-        print(poketmon[int(answer)])
+        print(poketmon_num[int(answer)])
     else:
-        print(covert_po[answer])
+        print(poketmon_name[answer])
         
 
 
