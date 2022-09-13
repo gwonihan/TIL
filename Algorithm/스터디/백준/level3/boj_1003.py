@@ -16,7 +16,7 @@ for _ in range(T):
     fibo(N)
 
 
-# 더 짧은 풀이
+# 숏코딩
 T = int(input())
 
 for _ in range(T):
