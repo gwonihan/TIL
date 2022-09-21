@@ -1,25 +1,21 @@
 # 계단 오르기
 n = int(input())
-stairs = []
 
-for _ in range(n):
-    stairs.append(int(input()))
+# 다이나믹 프로그래밍
+s = [0 for i in range(301)]
+dp = [0 for i in range(301)]
 
+for i in range(n):
+    s[i] = int(input())
 
-total_sum = 0
-i = 0
-while i <= n-2:
-    if i == 0 or i == n:
-        total_sum += stairs[i]
-        
-    
-    if stairs[i+1] < stairs[i+2]:
-        total_sum += stairs[i+2]
-        i += 2
-    else:
-        total_sum += stairs[i+1]
-        i += 1
+dp[0] = s[0]
+dp[1] = s[0] + s[1]
+dp[2] = max(s[1] + s[2], s[0] + s[2])
 
-print(total_sum)
+for i in range(3,n):
+    dp[i] = max(dp[i-3] + s[i-1] + s[i], dp[i-2] + s[i])
+
+print(dp[n-1])
+
 
     
