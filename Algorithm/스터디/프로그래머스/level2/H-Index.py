@@ -9,6 +9,6 @@ def solution(citations):
         if s <= len(citations[centerIndex:]):
             break
         else:
-            centerIndex -= 1
+            centerIndex -= 122
     
     return s                                                                                                                                                                                                        
