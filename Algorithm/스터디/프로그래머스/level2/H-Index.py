@@ -1,14 +1,12 @@
 # H-Index
 def solution(citations):
+    citations.sort(reverse=True)
     
-    citations.sort()
-    centerIndex = len(citations) // 2
-    
-    while True:
-        s = citations[centerIndex]
-        if s <= len(citations[centerIndex:]):
-            break
+    h = 0
+    for i in citations:
+        if h >= i:
+            return h
         else:
-            centerIndex -= 122
-    
-    return s                                                                                                                                                                                                        
+            h += 1
+    else:
+        return len(citations)                                                                                                                                                                                                      
