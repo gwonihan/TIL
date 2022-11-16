@@ -4,21 +4,17 @@ input = sys.stdin.readline
 
 n, m = map(int,input().split())
 
-visit = [0] * (n+1)
 t = []
 
-def dfs(step):
-    if step == m:
+def dfs():
+    if len(t) == m:
         print(*t)
         return
     
     for i in range(1, n+1):
-        if not visit[i]:
-            visit[i] = 1
+        if i not in t:
             t.append(i)
-            
-            dfs(step+1)
-            visit[i] = 0
+            dfs()
             t.pop()
 
-dfs(0)
+dfs()
